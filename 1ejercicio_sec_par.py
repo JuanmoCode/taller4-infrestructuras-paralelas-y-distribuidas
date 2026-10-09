@@ -36,11 +36,10 @@ def suma_paralela( CHUNK, NUM_HILOS,m):
     for i in threads:
         i.join()
     resultado_final = sum(sum(fila) for fila in resultados)
-    print(f"Resultado final: {resultado_final}")
     return resultado_final
 
 def main():
-    for i in range(0,5):
+    for i in range(10):
         NUM_HILOS = 100
         N= 1000
         CHUNK = N // NUM_HILOS
